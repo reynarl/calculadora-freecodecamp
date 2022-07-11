@@ -9,7 +9,9 @@ const Boton = (props) => {
 
   return (
     //Eliminamos (con trimEnd ) el espacio en blanco al final de cuando no se asigna la clase.
-    <div className={`boton-contenedor ${esOperador(props.children) ? 'operador': ''}`.trimEnd()}>
+    <div 
+      className={`boton-contenedor ${esOperador(props.children) ? 'operador': ''}`.trimEnd()}
+      onClick={() => props.manejarClick(props.children)}>
       {props.children}
     </div>
   )
